@@ -1,0 +1,89 @@
+html
+    scroll-behavior: smooth
+
+.container-fluid
+    margin-top: 86px
+    padding-left: 0
+    padding-right: 0
+    text-align: center
+    font-family: 'Abolition'
+
+.card
+    width: 18rem
+
+.card-body
+    font-family: 'Brandon-medium'
+    .product-name
+        font-family: 'Abolition'
+    .product-sku
+        float: right
+        font-size: 0.8rem
+        padding-top: 0.3rem
+    .product-price,
+    .product-description
+        border-bottom: 1px solid #ccc
+        padding-bottom: 1rem
+    .product-color
+        text-align: justify
+    .product-description
+        margin-bottom: 0.5rem
+    .product-category
+        text-align: right
+        margin-bottom: 0.2rem
+
+
+.products
+    display: grid
+    grid-template-rows: auto
+    grid-template-columns: repeat(auto-fill, minmax(260px, 4fr))
+    grid-gap: 1.5rem
+    align-items: start
+    grid-auto-flow: row
+    grid-auto-columns: minmax(260px, 4fr)
+    padding-left: 0.4rem
+
+.cart 
+    position: relative
+    text-align: right
+    padding-bottom: 1rem
+
+.cart #carrito
+    display: none
+
+.cart:hover #carrito
+    display: block
+    position: absolute
+    right:0
+
+    top:100%
+    z-index: 1
+    background-color: white
+    padding: 20px
+    min-height: 400px
+    min-width: 300px
+
+.img-cart
+    width: 60px
+
+tr
+    text-align: center
+
+table
+    border-spacing: 10px
+    border-collapse: separate
+    font-family: 'Brandon-medium'
+
+th, td
+    border-bottom: 1px solid #E1E1E1
+
+.btn-green
+    background-color: #1e801e
+    border-color: #ccc
+    color: white
+
+.badge
+    font-size: 100%
+
+
+
+    

@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="cart">
+    <a class="btn cart-btn ml-auto mr-3">
+      <img src="../../../assets/cart.png" width="35" height="35" alt="cart">
+      <span class="badge badge-light">{{ counter }}</span>
+    </a>
+    
+    <div *ngIf="!isEmpty">
+      <div id="carrito">
+        <table id="lista-carrito" class="u-full-width">
+          <thead>
+              <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let product of addedProducts'>
+              <td>
+                <img class="img-fluid card-img-top img-cart" [src] = "product.image" alt="producto">
+              </td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.price }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="pb-3">LIST OF PRODUCTS</h1>
+  <div class="products" *ngIf='products'>
+    <div *ngFor='let product of products'>
+      <div class="card">
+        <img class="img-fluid card-img-top" [src] = "product.image" alt="producto">
+        <div class="card-body">
+          <h4 class="product-name">{{ product.name }}</h4>
+          <p class="product-price">US $ {{ product.price }}</p>
+          <p class="product-description">Description: {{ product.description }}</p>
+          <p class="product-category">Category: {{ product.category }}</p>
+          <p class="product-color">Color: {{ product.color }}
+            <span class="product-sku">SKU: {{ product.sku }}</span>
+          </p>
+          <a href="#top" class="btn btn-green" (click)="addToCart(product.id)">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
