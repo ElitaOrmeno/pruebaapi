@@ -6,8 +6,8 @@
     </a>
     
     <div *ngIf="!isEmpty">
-      <div id="carrito">
-        <table id="lista-carrito" class="u-full-width">
+      <div id="my-cart">
+        <table>
           <thead>
               <tr>
                   <th>Image</th>
@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <h1 class="pb-3">LIST OF PRODUCTS</h1>
+  <div *ngIf='hasError' class="pb-3"><p class="error">{{ showErrorMsg }}</p></div>
   <div class="products" *ngIf='products'>
     <div *ngFor='let product of products'>
       <div class="card">
@@ -42,7 +42,7 @@
           <p class="product-color">Color: {{ product.color }}
             <span class="product-sku">SKU: {{ product.sku }}</span>
           </p>
-          <a href="#top" class="btn btn-green" (click)="addToCart(product.id)">Add To Cart</a>
+          <a class="btn btn-green" (click)="addToCart(product.id)">Add To Cart</a>
         </div>
       </div>
     </div>
