@@ -1,6 +1,6 @@
 # Pruebaapi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1. Use a node version 10 or superior.
 
 ## Development server
 
